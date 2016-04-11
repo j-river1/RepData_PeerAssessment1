@@ -40,6 +40,8 @@ Activity <- read.csv("activity.csv")
 
 ```
 
+![plot of chunk unnamed-chunk-2](./Seminar_02_assignment_markdown_Tal_files/figure-html/unnamed-chunk-2.png)
+
 2. Process/transform the data (if necessary) into a format suitable for your analysis
 
 ```{r Process}
@@ -165,8 +167,8 @@ Data_Dat_withOut_NA$date <- as.Date(as.character(Data_Dat_withOut_NA$date), "%Y-
 weekday <- weekdays(Data_Dat_withOut_NA$date)
 Data_Dat_withOut_NA_days <- cbind(Data_Dat_withOut_NA,weekday) 
 
-Data_Dat_withOut_NA_days$weekday <- gsub("lunes|martes|miércoles|jueves|viernes", "weekday", Data_Dat_withOut_NA_days$weekday)
-Data_Dat_withOut_NA_days$weekday <- gsub("sábado|domingo", "weekend", Data_Dat_withOut_NA_days$weekday)
+Data_Dat_withOut_NA_days$weekday <- gsub("lunes|martes|miÃ©rcoles|jueves|viernes", "weekday", Data_Dat_withOut_NA_days$weekday)
+Data_Dat_withOut_NA_days$weekday <- gsub("sÃ¡bado|domingo", "weekend", Data_Dat_withOut_NA_days$weekday)
 #Convert to factor
 Data_Dat_withOut_NA_days$weekday <- factor(Data_Dat_withOut_NA_days$weekday)
 
