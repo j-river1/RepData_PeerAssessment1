@@ -40,7 +40,6 @@ Activity <- read.csv("activity.csv")
 
 ```
 
-![plot of chunk unnamed-chunk-2](./Seminar_02_assignment_markdown_Tal_files/figure-html/unnamed-chunk-2.png)
 
 2. Process/transform the data (if necessary) into a format suitable for your analysis
 
@@ -97,7 +96,7 @@ Number_Steps_PerDay_Mean <- aggregate(steps ~ interval , data = Activity, FUN= m
 plot(Number_Steps_PerDay_Mean$interval, Number_Steps_PerDay_Mean$steps, type="l", main="The Average of Steps Per Day", ylab ="Number of  Steps", xlab ="Dates")
 
 ```
-
+![Time serires](./RepData_PeerAssessment1/instructions_fig/Histogram1.png)
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 ``` {r MaximunSteps}
