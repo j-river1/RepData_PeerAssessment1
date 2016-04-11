@@ -59,7 +59,7 @@ Number_Steps_PerDay <- aggregate(steps ~ date, data = Activity, FUN= sum)
 Number_Steps_PerDay
 ```
 ```
-date steps
+         date steps
 1  2012-10-02   126
 2  2012-10-03 11352
 3  2012-10-04 12116
@@ -129,13 +129,19 @@ hist(Number_Steps_PerDay$steps, col= "gold", main="Total of Steps Per Day", xlab
 #Media
 Media_Per_Day <- mean(Number_Steps_PerDay$steps)
 Media_Per_Day
-
+```
+```
+[1] 10766.19
+```
+```{r medianPe}
 #Median
 
 Median_Per_Day <- median(Number_Steps_PerDay$steps)
 Median_Per_Day
 ```
-
+```
+[1] 10765
+```
 
 ## What is the average daily activity pattern?
 
@@ -163,6 +169,10 @@ positi <- which(Number_Steps_PerDay_Mean$steps== max(Number_Steps_PerDay_Mean$st
 Number_Steps_PerDay_Mean[positi,1]
 
 ``` 
+``` 
+[1] 835
+
+``` 
 
 ##Imputing missing values
 
@@ -175,7 +185,9 @@ NumberNA <- sum(is.na(Activity))
 NumberNA
 
 ```
-
+```
+[1] 2304
+```
 2. Devise a strategy for filling in all of the missing values in the dataset-
 
 I replaced the NA's with 0.
@@ -200,10 +212,17 @@ hist(Number_Steps_PerDay_OutNA$steps, col= "gold", main="Total of Steps Per Day 
 
 Number_Steps_PerDay_Mean <- mean(Number_Steps_PerDay_OutNA$steps)
 Number_Steps_PerDay_Mean
+```
+```
+[1] 9354.23
+```
+``` {r MedianOut}
 Number_Steps_PerDay_Median <- median(Number_Steps_PerDay_OutNA$steps)
 Number_Steps_PerDay_Median
 ```
-
+```
+[1] 10395
+```
 Clearly, the histograms with NA and with NA equal to 0 are different. In the same way, the media and median. The replace NA with other values affect the final result. 
 
 
