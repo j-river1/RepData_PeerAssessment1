@@ -123,6 +123,7 @@ hist(Number_Steps_PerDay$steps, col= "gold", main="Total of Steps Per Day", xlab
 
 
 ```
+![Histogram 1](./instructions_fig/Histogram1.png)
 
 3-. Calculate and report the mean and median of the total number of steps taken per day
 ``` {r mediaAndMean}
@@ -156,6 +157,9 @@ Number_Steps_PerDay_Mean <- aggregate(steps ~ interval , data = Activity, FUN= m
 plot(Number_Steps_PerDay_Mean$interval, Number_Steps_PerDay_Mean$steps, type="l", main="The Average of Steps Per Day", ylab ="Number of  Steps", xlab ="Dates")
 
 ```
+
+![Time series](./instructions_fig/Time_series1.png)
+
 
 2-. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -203,10 +207,12 @@ Data_Dat_withOut_NA <- replace(Activity, is.na(Activity), 0)
 
 4-. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. 
 
+![Histogram 1](./instructions_fig/Histogram2.png)
 ```{r medianReplace}
 #Histogram with replace the NA with 0.
 Number_Steps_PerDay_OutNA <- aggregate(steps ~ date, data = Data_Dat_withOut_NA, FUN= sum)
 hist(Number_Steps_PerDay_OutNA$steps, col= "gold", main="Total of Steps Per Day without NA", xlab ="Date")
+
 
 #Mean and Median without NA
 
