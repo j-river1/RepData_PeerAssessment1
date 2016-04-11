@@ -96,7 +96,7 @@ Number_Steps_PerDay_Mean <- aggregate(steps ~ interval , data = Activity, FUN= m
 plot(Number_Steps_PerDay_Mean$interval, Number_Steps_PerDay_Mean$steps, type="l", main="The Average of Steps Per Day", ylab ="Number of  Steps", xlab ="Dates")
 
 ```
-
+![Time series1](./instructions_fig/Time_series1.png)
 
 2-. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -150,7 +150,7 @@ Number_Steps_PerDay_Mean
 Number_Steps_PerDay_Median <- median(Number_Steps_PerDay_OutNA$steps)
 Number_Steps_PerDay_Median
 ```
-
+![Time seriesW](./instructions_fig/Histogram2.png)
 Clearly, the histograms with NA and with NA equal to 0 are different. In the same way, the media and median. The replace NA with other values affect the final result. 
 
 
@@ -180,5 +180,5 @@ library(lattice)
 Data_Total <- aggregate (steps ~ interval +weekday,data=Data_Dat_withOut_NA_days, mean)
 xyplot(steps ~ interval| weekday, Data_Total,type="l", layout=c(1,2))
 ```
-
+![Time seriesW](./instructions_fig/Time_series_Week.png)
 
