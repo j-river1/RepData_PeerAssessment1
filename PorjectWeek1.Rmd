@@ -16,7 +16,7 @@ This is first project of reproducible and research course. The project is based 
 Show any code that is needed to
 
 
-1  Load the data (i.e. read.csv())
+1-  Load the data (i.e. read.csv())
 ```{r Load data}
 library(plyr)
 library(reshape2)
@@ -41,7 +41,7 @@ Activity <- read.csv("activity.csv")
 ```
 
 
-2  Process/transform the data (if necessary) into a format suitable for your analysis
+2-  Process/transform the data (if necessary) into a format suitable for your analysis
 
 ```{r Process}
 #Convert to date format
